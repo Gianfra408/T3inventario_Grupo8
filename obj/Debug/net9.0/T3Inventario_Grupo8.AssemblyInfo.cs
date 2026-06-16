@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("T3Inventario_Grupo8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+797adf2d9d01d19e812b26cb0ced8590eac45334")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b1cc8a7d381b1b33f0f8d219fd73a541fba63c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("T3Inventario_Grupo8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("T3Inventario_Grupo8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
