@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj": {}
+    "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj": {}
   },
   "projects": {
-    "C:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj": {
+    "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
+        "projectUniqueName": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
         "projectName": "T3Inventario_Grupo8",
-        "projectPath": "C:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
+        "projectPath": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
         "packagesPath": "C:\\Users\\Aluu\\.nuget\\packages\\",
-        "outputPath": "C:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\obj\\",
+        "outputPath": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aluu\\AppData\\Roaming\\NuGet\\NuGet.Config"

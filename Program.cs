@@ -17,18 +17,18 @@ class Program
 
         do
         {
-            Console.WriteLine("\n===== MENU =====");
+            Console.WriteLine("\n<<<<< MENU >>>>>");
             Console.WriteLine("1. Registrar producto");
             Console.WriteLine("2. Mostrar productos");
-            Console.WriteLine("3. Buscar por c贸digo");
+            Console.WriteLine("3. Buscar por código");
             Console.WriteLine("4. Modificar producto");
-            Console.WriteLine("5. Insertar en posici贸n");
+            Console.WriteLine("5. Insertar en posición");
             Console.WriteLine("6. Eliminar producto");
             Console.WriteLine("7. Ordenar por burbuja");
             Console.WriteLine("8. Resumen");
             Console.WriteLine("9. Salir");
 
-            Console.Write("Opcion: ");
+            Console.Write("Opción: ");
             opcion = int.Parse(Console.ReadLine());
 
             switch (opcion)
@@ -61,7 +61,7 @@ class Program
                     Console.WriteLine("Fin del programa");
                     break;
                 default:
-                    Console.WriteLine("Opci贸n incorrecta");
+                    Console.WriteLine("Opción incorrecta");
                     break;
             }
 
@@ -70,33 +70,99 @@ class Program
 
     static void Registrar()
 {
-    if (cantidad >= MAX)
+if (cantidad >= MAX)
+{
+Console.WriteLine("Capacidad máxima alcanzada");
+return;
+}
+
+string codigo;
+
+do
+{
+    Console.Write("Código: ");
+    codigo = Console.ReadLine();
+
+    if (codigo == "")
     {
-        Console.WriteLine("Capacidad máxima alcanzada");
-        return;
+        Console.WriteLine("El código no puede estar vacío.");
     }
 
-    Console.Write("Código: ");
-    string codigo = Console.ReadLine();
+} while (codigo == "");
 
+string nombre;
+
+do
+{
     Console.Write("Nombre: ");
-    string nombre = Console.ReadLine();
+    nombre = Console.ReadLine();
 
-    Console.Write("Precio: ");
-    double precio = Convert.ToDouble(Console.ReadLine());
+    if (nombre == "")
+    {
+        Console.WriteLine("El nombre no puede estar vacío.");
+    }
 
-    Console.Write("Stock: ");
-    int stock = Convert.ToInt32(Console.ReadLine());
+} while (nombre == "");
 
-    codigos[cantidad] = codigo;
-    nombres[cantidad] = nombre;
-    precios[cantidad] = precio;
-    stocks[cantidad] = stock;
+Console.Write("Precio: ");
+string textoPrecio = Console.ReadLine();
 
-    cantidad++;
+double precio;
 
-    Console.WriteLine("Producto registrado correctamente.");
+if (textoPrecio == "")
+{
+    precio = 0;
+    Console.WriteLine("Precio vacío. Se asignó 0.");
 }
+else
+{
+    precio = double.Parse(textoPrecio);
+
+    while (precio < 0)
+    {
+        Console.WriteLine("El precio no puede ser negativo.");
+        Console.Write("Precio: ");
+        precio = double.Parse(Console.ReadLine());
+    }
+}
+
+Console.Write("Stock: ");
+string textoStock = Console.ReadLine();
+
+int stock;
+
+if (textoStock == "")
+{
+    stock = 0;
+    Console.WriteLine("Stock vacío. Se asignó 0.");
+}
+else
+{
+    stock = int.Parse(textoStock);
+
+    while (stock < 0)
+    {
+        Console.WriteLine("El stock no puede ser negativo.");
+        Console.Write("Stock: ");
+        stock = int.Parse(Console.ReadLine());
+    }
+}
+
+codigos[cantidad] = codigo;
+nombres[cantidad] = nombre;
+precios[cantidad] = precio;
+stocks[cantidad] = stock;
+
+cantidad++;
+
+Console.WriteLine("Producto registrado correctamente.");
+
+Console.WriteLine("\nPresione una tecla para continuar...");
+Console.ReadKey();
+Console.Clear();
+
+}
+
 
     static void Mostrar()
     {
