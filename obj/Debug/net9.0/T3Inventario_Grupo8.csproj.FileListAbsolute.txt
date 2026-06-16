@@ -13,3 +13,18 @@ C:\FUNDAMENTOS ALGORITMOS\T3Inventario_Grupo8\obj\Debug\net9.0\refint\T3Inventar
 C:\FUNDAMENTOS ALGORITMOS\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.pdb
 C:\FUNDAMENTOS ALGORITMOS\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.genruntimeconfig.cache
 C:\FUNDAMENTOS ALGORITMOS\T3Inventario_Grupo8\obj\Debug\net9.0\ref\T3Inventario_Grupo8.dll
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.GeneratedMSBuildEditorConfig.editorconfig
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.AssemblyInfoInputs.cache
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.AssemblyInfo.cs
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.csproj.CoreCompileInputs.cache
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.sourcelink.json
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.dll
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\refint\T3Inventario_Grupo8.dll
+C:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.pdb
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.exe
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.deps.json
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.runtimeconfig.json
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.dll
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.pdb
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.genruntimeconfig.cache
+c:\A -Pruebas\Csharp\S13 - DANNY\T3inventario_Grupo8\obj\Debug\net9.0\ref\T3Inventario_Grupo8.dll
