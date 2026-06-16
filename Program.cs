@@ -28,8 +28,8 @@ class Program
             Console.WriteLine("8. Resumen");
             Console.WriteLine("9. Salir");
 
-            Console.Write("Opci贸n: ");
-            opcion = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Opcion: ");
+            opcion = int.Parse(Console.ReadLine());
 
             switch (opcion)
             {
@@ -69,9 +69,34 @@ class Program
     }
 
     static void Registrar()
+{
+    if (cantidad >= MAX)
     {
-
+        Console.WriteLine("Capacidad máxima alcanzada");
+        return;
     }
+
+    Console.Write("Código: ");
+    string codigo = Console.ReadLine();
+
+    Console.Write("Nombre: ");
+    string nombre = Console.ReadLine();
+
+    Console.Write("Precio: ");
+    double precio = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Stock: ");
+    int stock = Convert.ToInt32(Console.ReadLine());
+
+    codigos[cantidad] = codigo;
+    nombres[cantidad] = nombre;
+    precios[cantidad] = precio;
+    stocks[cantidad] = stock;
+
+    cantidad++;
+
+    Console.WriteLine("Producto registrado correctamente.");
+}
 
     static void Mostrar()
     {
