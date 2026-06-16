@@ -171,6 +171,56 @@ Console.Clear();
 
     static void Buscar()
     {
+        if (cantidad == 0)
+        {
+            Console.WriteLine("No hay productos registrados.");
+            Console.WriteLine("\nPresione una tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+        }
+
+        string codigo;
+
+        do
+        {
+            Console.Write("Código a buscar: ");
+            codigo = Console.ReadLine();
+
+            if (codigo == "")
+            {
+                Console.WriteLine("El código no puede estar vacío.");
+            }
+
+        } while (codigo == "");
+
+        int posicion = -1;
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            if (codigos[i] == codigo)
+            {
+                posicion = i;
+                break;
+            }
+        }
+
+        if (posicion == -1)
+        {
+            Console.WriteLine("Producto no encontrado.");
+        }
+        else
+        {
+            Console.WriteLine("\nProducto encontrado:");
+            Console.WriteLine("Código: " + codigos[posicion]);
+            Console.WriteLine("Nombre: " + nombres[posicion]);
+            Console.WriteLine("Precio: " + precios[posicion]);
+            Console.WriteLine("Stock: " + stocks[posicion]);
+        }
+
+        Console.WriteLine("\nPresione una tecla para continuar...");
+        Console.ReadKey();
+        Console.Clear();
 
     }
 
