@@ -207,7 +207,37 @@ Console.Write("Ingrese el código del producto a modificar: ");
 
     static void Eliminar()
     {
+Console.Write("Ingrese el código del producto a eliminar: ");
+    string codigoBuscado = Console.ReadLine();
 
+    int indice = -1;
+
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (codigos[i] == codigoBuscado)
+        {
+            indice = i;
+            break;
+        }
+    }
+
+    if (indice == -1)
+    {
+        Console.WriteLine("Producto no encontrado");
+        return;
+    }
+
+    for (int i = indice; i < cantidad - 1; i++)
+    {
+        codigos[i] = codigos[i + 1];
+        nombres[i] = nombres[i + 1];
+        precios[i] = precios[i + 1];
+        stocks[i] = stocks[i + 1];
+    }
+
+    cantidad--;
+
+    Console.WriteLine("Producto eliminado correctamente");
     }
 
     static void OrdenarBurbuja()
