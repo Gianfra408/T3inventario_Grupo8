@@ -1,0 +1,15 @@
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.exe
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.deps.json
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.runtimeconfig.json
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.dll
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\bin\Debug\net9.0\T3Inventario_Grupo8.pdb
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.AssemblyInfoInputs.cache
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.AssemblyInfo.cs
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.csproj.CoreCompileInputs.cache
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.sourcelink.json
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.dll
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\refint\T3Inventario_Grupo8.dll
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.pdb
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\T3Inventario_Grupo8.genruntimeconfig.cache
+C:\Fundamentos de Algoritmos\T3\T3Inventario_Grupo8\obj\Debug\net9.0\ref\T3Inventario_Grupo8.dll
