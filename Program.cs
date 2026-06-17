@@ -399,12 +399,36 @@ if (indice == -1)
 
     Console.WriteLine("Producto eliminado correctamente");
 }
-
+    //DANIEL GUTIERREZ - INSERTANDO EL PARAMETRO PARA ORDENAMIENTO DE BURBUJA
     static void OrdenarBurbuja()
     {
+        for (int i = 0; i < cantidad - 1; i++)
+        {
+            for (int j = 0; j < cantidad - i - 1; j++)
+            {
+                if (precios[j] > precios[j + 1])
+                {
+                double auxPrecio = precios[j];
+                precios[j] = precios[j + 1];
+                precios[j + 1] = auxPrecio;
 
+                string auxCodigo = codigos[j];
+                codigos[j] = codigos[j + 1];
+                codigos[j + 1] = auxCodigo;
+
+                string auxNombre = nombres[j];
+                nombres[j] = nombres[j + 1];
+                nombres[j + 1] = auxNombre;
+
+                int auxStock = stocks[j];
+                stocks[j] = stocks[j + 1];
+                stocks[j + 1] = auxStock;
+                
+                }
+            }
+        }
+        Console.WriteLine("Productos ordenados correctamente.");
     }
-
     static void Resumen()
     {
 
