@@ -171,8 +171,6 @@ Console.Clear();
 
     static void Buscar()
     {
-<<<<<<< HEAD
-=======
         if (cantidad == 0)
         {
             Console.WriteLine("No hay productos registrados.");
@@ -181,9 +179,7 @@ Console.Clear();
             Console.Clear();
             return;
         }
-
         string codigo;
-
         do
         {
             Console.Write("Código a buscar: ");
@@ -224,13 +220,10 @@ Console.Clear();
         Console.WriteLine("\nPresione una tecla para continuar...");
         Console.ReadKey();
         Console.Clear();
->>>>>>> main
-
     }
 
     static void Modificar()
     {
-<<<<<<< HEAD
 Console.Write("Ingrese el código del producto a modificar: ");
     string codigoBuscado = Console.ReadLine();
 
@@ -251,9 +244,8 @@ Console.Write("Ingrese el código del producto a modificar: ");
             return;
         }
     }
-
+    
     Console.WriteLine("Producto no encontrado");
-=======
         if (cantidad == 0)
         {
             Console.WriteLine("No hay productos registrados.");
@@ -262,7 +254,6 @@ Console.Write("Ingrese el código del producto a modificar: ");
             Console.Clear();
             return;
         }
-
         string codigo;
 
         do
@@ -276,7 +267,6 @@ Console.Write("Ingrese el código del producto a modificar: ");
             }
 
         } while (codigo == "");
-
         int posicion = -1;
 
         for (int i = 0; i < cantidad; i++)
@@ -371,7 +361,6 @@ Console.Write("Ingrese el código del producto a modificar: ");
         Console.ReadKey();
         Console.Clear();
 
->>>>>>> main
     }
 
     static void Insertar()
@@ -379,7 +368,6 @@ Console.Write("Ingrese el código del producto a modificar: ");
 
     }
 
-<<<<<<< HEAD
    static void Eliminar()
 {
     Console.Write("Ingrese el código del producto a eliminar: ");
@@ -412,13 +400,6 @@ if (indice == -1)
     Console.WriteLine("Producto eliminado correctamente");
 }
 
-=======
-    static void Eliminar()
-    {
-
-    }
-
->>>>>>> main
     static void OrdenarBurbuja()
     {
 
@@ -428,7 +409,6 @@ if (indice == -1)
     {
 
     }
-<<<<<<< HEAD
     static int ObtenerIndice(string codigoBuscado)
 {
     for (int i = 0; i < cantidad; i++)
@@ -442,6 +422,3 @@ if (indice == -1)
     return -1;
 }
 }
-=======
-}
->>>>>>> main
