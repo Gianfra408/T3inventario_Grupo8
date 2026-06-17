@@ -185,7 +185,8 @@ Console.Clear();
         do
         {
             Console.Write("Código a buscar: ");
-            codigo = Console.ReadLine();
+            codigo = Console.ReadLine() ?? "";
+            codigo = codigo.Trim();
 
             if (codigo == "")
             {
@@ -198,7 +199,7 @@ Console.Clear();
 
         for (int i = 0; i < cantidad; i++)
         {
-            if (codigos[i] == codigo)
+            if (string.Equals(codigos[i], codigo, StringComparison.OrdinalIgnoreCase))
             {
                 posicion = i;
                 break;
