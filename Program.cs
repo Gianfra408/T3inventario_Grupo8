@@ -3,7 +3,7 @@
 class Program
 {
     static int MAX = 100;
-
+    static int opcion;
     static string[] codigos = new string[MAX];
     static string[] nombres = new string[MAX];
     static double[] precios = new double[MAX];
@@ -13,7 +13,7 @@ class Program
 
     static void Main()
     {
-        int opcion;
+        
 
         do
         {
@@ -68,8 +68,9 @@ class Program
         } while (opcion != 9);
     }
 
-    static void Registrar()
+static void Registrar()
 {
+    Console.Clear();
 if (cantidad >= MAX)
 {
 Console.WriteLine("Capacidad máxima alcanzada");
@@ -157,16 +158,36 @@ cantidad++;
 
 Console.WriteLine("Producto registrado correctamente.");
 
-Console.WriteLine("\nPresione una tecla para continuar...");
-Console.ReadKey();
-Console.Clear();
+PresioneParaContinuar();
+
 
 }
 
-
+//DANIEL GUTIERREZ - MOSTRANDO LOS PRODUCTOS REGISTRADOS
     static void Mostrar()
     {
+        
+            Console.WriteLine("----------------------------------------------------------------------------");
+            Console.WriteLine("                 MUESTRA DE PRODUCTOS:");
+            Console.WriteLine("----------------------------------------------------------------------------");
+        if (cantidad == 0)
+            {
+                Console.WriteLine("\nNo hay productos registrados");
+                Console.ReadKey();
+                return;
+            }
 
+            for (int i = 0; i < cantidad; i++)
+            {
+                Console.WriteLine("[" + i + "] Código: " + codigos[i] +
+                                 " | Nombre: " + nombres[i] +
+                                 " | Precio: S/" + precios[i].ToString("F2") +
+                                 " | Stock: " + stocks[i]);
+            }
+
+        Console.WriteLine("\nPresione una tecla para continuar...");
+        Console.ReadKey();
+   
     }
 
     static void Buscar()
@@ -218,13 +239,12 @@ Console.Clear();
         }
 
         Console.WriteLine("\nPresione una tecla para continuar...");
-        Console.ReadKey();
-        Console.Clear();
+        PresioneParaContinuar();
     }
 
     static void Modificar()
     {
-Console.Write("Ingrese el código del producto a modificar: ");
+    Console.Write("Ingrese el código del producto a modificar: ");
     string codigoBuscado = Console.ReadLine();
 
     for (int i = 0; i < cantidad; i++)
@@ -245,13 +265,12 @@ Console.Write("Ingrese el código del producto a modificar: ");
         }
     }
     
-    Console.WriteLine("Producto no encontrado");
+        Console.WriteLine("Producto no encontrado");
         if (cantidad == 0)
         {
             Console.WriteLine("No hay productos registrados.");
             Console.WriteLine("\nPresione una tecla para continuar...");
-            Console.ReadKey();
-            Console.Clear();
+            PresioneParaContinuar();
             return;
         }
         string codigo;
@@ -358,14 +377,51 @@ Console.Write("Ingrese el código del producto a modificar: ");
         Console.WriteLine("Producto modificado correctamente.");
 
         Console.WriteLine("\nPresione una tecla para continuar...");
-        Console.ReadKey();
-        Console.Clear();
+        PresioneParaContinuar();
 
     }
 
     static void Insertar()
     {
+        if (cantidad >= MAX)
+        {
+            Console.WriteLine("Capacidad máxima alcanzada.");
+            return;
+        }
 
+        Console.Write("Posición: ");
+        int posicion = Convert.ToInt32(Console.ReadLine());
+
+        if (posicion < 0 || posicion > cantidad)
+        {
+            Console.WriteLine("Posición inválida.");
+            return;
+        }
+
+        for (int i = cantidad; i > posicion; i--)
+        {
+            codigos[i] = codigos[i - 1];
+            nombres[i] = nombres[i - 1];
+            precios[i] = precios[i - 1];
+            stocks[i] = stocks[i - 1];
+        }
+
+        Console.Write("Código: ");
+        codigos[posicion] = Console.ReadLine();
+
+        Console.Write("Nombre: ");
+        nombres[posicion] = Console.ReadLine();
+
+        Console.Write("Precio: ");
+        precios[posicion] = Double.Parse(Console.ReadLine());
+
+        Console.Write("Stock: ");
+        stocks[posicion] = int.Parse(Console.ReadLine());
+
+        cantidad++;
+
+        Console.WriteLine("Producto insertado correctamente.");
+        PresioneParaContinuar();
     }
 
    static void Eliminar()
@@ -374,13 +430,6 @@ Console.Write("Ingrese el código del producto a modificar: ");
     string codigoBuscado = Console.ReadLine();
 
     int indice = ObtenerIndice(codigoBuscado);
-
-if (indice == -1)
-{
-    Console.WriteLine("Producto no encontrado");
-    return;
-}
-
     if (indice == -1)
     {
         Console.WriteLine("Producto no encontrado");
@@ -398,16 +447,67 @@ if (indice == -1)
     cantidad--;
 
     Console.WriteLine("Producto eliminado correctamente");
+    PresioneParaContinuar();
 }
-
+    //DANIEL GUTIERREZ - INSERTANDO EL PARAMETRO PARA ORDENAMIENTO DE BURBUJA
     static void OrdenarBurbuja()
     {
+        for (int i = 0; i < cantidad - 1; i++)
+        {
+            for (int j = 0; j < cantidad - i - 1; j++)
+            {
+                if (precios[j] > precios[j + 1])
+                {
+                double auxPrecio = precios[j];
+                precios[j] = precios[j + 1];
+                precios[j + 1] = auxPrecio;
 
+                string auxCodigo = codigos[j];
+                codigos[j] = codigos[j + 1];
+                codigos[j + 1] = auxCodigo;
+
+                string auxNombre = nombres[j];
+                nombres[j] = nombres[j + 1];
+                nombres[j + 1] = auxNombre;
+
+                int auxStock = stocks[j];
+                stocks[j] = stocks[j + 1];
+                stocks[j + 1] = auxStock;
+                
+                }
+            }
+        }
+        Console.WriteLine("Productos ordenados correctamente.");
+        PresioneParaContinuar();
     }
-
     static void Resumen()
     {
+        if (cantidad == 0)
+        {
+            Console.WriteLine("No hay productos registrados.");
+             return;
+        }
 
+        double suma = 0;
+        int indiceMayor = 0;
+        int indiceMenor = 0;
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            suma += precios[i];
+
+            if (precios[i] > precios[indiceMayor])
+                indiceMayor = i;
+
+            if (precios[i] < precios[indiceMenor])
+                indiceMenor = i;
+        }
+
+        Console.WriteLine("Total de productos: " + cantidad);
+        Console.WriteLine("Producto con mayor precio: " + nombres[indiceMayor]);
+        Console.WriteLine("Producto con menor precio: " + nombres[indiceMenor]);
+        Console.WriteLine("Suma total de precios: " + suma);
+        PresioneParaContinuar();
     }
     static int ObtenerIndice(string codigoBuscado)
 {
@@ -421,4 +521,10 @@ if (indice == -1)
 
     return -1;
 }
+//Daniel gutierrez - metodo para presionar una tecla y continuar
+static void PresioneParaContinuar()
+    {
+        Console.WriteLine("\nPresione una tecla para continuar...");
+        Console.ReadKey();
+    }
 }
