@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Fundamentos de Algoritmos\\T3\\T3Inventario_Grupo8\\T3Inventario_Grupo8.csproj": {}
   },
   "projects": {
@@ -12,20 +13,33 @@
         "projectPath": "C:\\Fundamentos de Algoritmos\\T3\\T3Inventario_Grupo8\\T3Inventario_Grupo8.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
         "outputPath": "C:\\Fundamentos de Algoritmos\\T3\\T3Inventario_Grupo8\\obj\\",
+=======
+    "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj": {}
+  },
+  "projects": {
+    "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
+        "projectName": "T3Inventario_Grupo8",
+        "projectPath": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
+        "packagesPath": "C:\\Users\\Aluu\\.nuget\\packages\\",
+        "outputPath": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\Aluu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> main
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

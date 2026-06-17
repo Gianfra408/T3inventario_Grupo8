@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ohiLPNu4BBU=",
   "success": true,
   "projectFilePath": "C:\\Fundamentos de Algoritmos\\T3\\T3Inventario_Grupo8\\T3Inventario_Grupo8.csproj",
+=======
+  "dgSpecHash": "7c9y28Cf8CI=",
+  "success": true,
+  "projectFilePath": "c:\\A -Pruebas\\Csharp\\S13 - DANNY\\T3inventario_Grupo8\\T3Inventario_Grupo8.csproj",
+>>>>>>> main
   "expectedPackageFiles": [],
   "logs": []
 }
