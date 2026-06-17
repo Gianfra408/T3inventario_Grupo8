@@ -171,11 +171,178 @@ Console.Clear();
 
     static void Buscar()
     {
+        if (cantidad == 0)
+        {
+            Console.WriteLine("No hay productos registrados.");
+            Console.WriteLine("\nPresione una tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+        }
+
+        string codigo;
+
+        do
+        {
+            Console.Write("Código a buscar: ");
+            codigo = Console.ReadLine() ?? "";
+            codigo = codigo.Trim();
+
+            if (codigo == "")
+            {
+                Console.WriteLine("El código no puede estar vacío.");
+            }
+
+        } while (codigo == "");
+
+        int posicion = -1;
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            if (string.Equals(codigos[i], codigo, StringComparison.OrdinalIgnoreCase))
+            {
+                posicion = i;
+                break;
+            }
+        }
+
+        if (posicion == -1)
+        {
+            Console.WriteLine("Producto no encontrado.");
+        }
+        else
+        {
+            Console.WriteLine("\nProducto encontrado:");
+            Console.WriteLine("Código: " + codigos[posicion]);
+            Console.WriteLine("Nombre: " + nombres[posicion]);
+            Console.WriteLine("Precio: " + precios[posicion]);
+            Console.WriteLine("Stock: " + stocks[posicion]);
+        }
+
+        Console.WriteLine("\nPresione una tecla para continuar...");
+        Console.ReadKey();
+        Console.Clear();
 
     }
 
     static void Modificar()
     {
+        if (cantidad == 0)
+        {
+            Console.WriteLine("No hay productos registrados.");
+            Console.WriteLine("\nPresione una tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+        }
+
+        string codigo;
+
+        do
+        {
+            Console.Write("Código del producto a modificar: ");
+            codigo = Console.ReadLine();
+
+            if (codigo == "")
+            {
+                Console.WriteLine("El código no puede estar vacío.");
+            }
+
+        } while (codigo == "");
+
+        int posicion = -1;
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            if (codigos[i] == codigo)
+            {
+                posicion = i;
+                break;
+            }
+        }
+
+        if (posicion == -1)
+        {
+            Console.WriteLine("Producto no encontrado.");
+            Console.WriteLine("\nPresione una tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+        }
+
+        Console.WriteLine("\nProducto actual:");
+        Console.WriteLine("Código: " + codigos[posicion]);
+        Console.WriteLine("Nombre: " + nombres[posicion]);
+        Console.WriteLine("Precio: " + precios[posicion]);
+        Console.WriteLine("Stock: " + stocks[posicion]);
+
+        string nuevoNombre;
+
+        do
+        {
+            Console.Write("Nuevo nombre: ");
+            nuevoNombre = Console.ReadLine();
+
+            if (nuevoNombre == "")
+            {
+                Console.WriteLine("El nombre no puede estar vacío.");
+            }
+
+        } while (nuevoNombre == "");
+
+        Console.Write("Nuevo precio: ");
+        string textoPrecio = Console.ReadLine();
+
+        double nuevoPrecio;
+
+        if (textoPrecio == "")
+        {
+            nuevoPrecio = 0;
+            Console.WriteLine("Precio vacío. Se asignó 0.");
+        }
+        else
+        {
+            nuevoPrecio = double.Parse(textoPrecio);
+
+            while (nuevoPrecio < 0)
+            {
+                Console.WriteLine("El precio no puede ser negativo.");
+                Console.Write("Nuevo precio: ");
+                nuevoPrecio = double.Parse(Console.ReadLine());
+            }
+        }
+
+        Console.Write("Nuevo stock: ");
+        string textoStock = Console.ReadLine();
+
+        int nuevoStock;
+
+        if (textoStock == "")
+        {
+            nuevoStock = 0;
+            Console.WriteLine("Stock vacío. Se asignó 0.");
+        }
+        else
+        {
+            nuevoStock = int.Parse(textoStock);
+
+            while (nuevoStock < 0)
+            {
+                Console.WriteLine("El stock no puede ser negativo.");
+                Console.Write("Nuevo stock: ");
+                nuevoStock = int.Parse(Console.ReadLine());
+            }
+        }
+
+        nombres[posicion] = nuevoNombre;
+        precios[posicion] = nuevoPrecio;
+        stocks[posicion] = nuevoStock;
+
+        Console.WriteLine("Producto modificado correctamente.");
+
+        Console.WriteLine("\nPresione una tecla para continuar...");
+        Console.ReadKey();
+        Console.Clear();
 
     }
 
